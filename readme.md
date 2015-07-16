@@ -86,3 +86,35 @@ node_js:
 ```
 
 [![Current Status](https://secure.travis-ci.org/tschaub/web-start.svg?branch=master)](https://travis-ci.org/tschaub/web-start)
+
+Bring in Karma to orchestrate test runs in real browsers:
+
+    npm install karma karma-browserify karma-chrome-launcher karma-mocha karma-sauce-launcher --save-dev
+
+Add a karma.conf.js to configure Karma:
+```js
+module.exports = function(karma) {
+
+  karma.set({
+    browsers: ['Chrome'],
+    frameworks: ['browserify', 'mocha'],
+    files: ['test/**/*.js'],
+    preprocessors: {
+      'test/**/*.js': ['browserify']
+    },
+    browserify: {
+      debug: true
+    }
+  });
+
+};
+```
+
+Update your test related scripts in package.json:
+```json
+    "start": "ecstatic build & karma start & watchy --watch src -- bash -c 'npm run lint && npm run build'",
+    "lint": "eslint src",
+    "pretest": "npm run lint",
+    "test": "karma start --single-run",
+    "test-node": "mocha --recursive test"
+```
