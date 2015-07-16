@@ -23,3 +23,39 @@ Add to package.json:
 Build the bundle and serve the result:
 
     npm run build && npm start
+
+## Step 2
+
+Bring in a linter:
+
+    npm install eslint eslint-config-planet --save-dev
+
+Create .eslintrc with the following:
+
+```json
+{
+  "extends": "planet"
+}
+```
+
+Configure your editor to run the linter (e.g. SublimeLinter-eslint).
+
+Add a test script to package.json:
+
+```json
+    "test": "eslint src"
+```
+
+Run the linter:
+
+    npm test
+
+Install a file watcher to run tasks on changes:
+
+    npm install watchy --save-dev
+
+Modify the start command in package.json:
+
+```json
+    "start": "ecstatic build & watchy --watch src -- bash -c 'npm test && npm run build'",
+```
