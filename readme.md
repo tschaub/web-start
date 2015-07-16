@@ -118,3 +118,5 @@ Update your test related scripts in package.json:
     "test": "karma start --single-run",
     "test-node": "mocha --recursive test"
 ```
+
+Get set up with Sauce Labs, and update your .travis.yml to encrypt your `SAUCE_USERNAME` and `SAUCE_ACCESS_KEY` (see https://docs.saucelabs.com/ci-integrations/travis-ci/).  Update your karma.conf.js to run tests on Sauce Labs if the `TRAVIS` environment variable is set.
