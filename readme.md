@@ -74,3 +74,15 @@ Update package.json scripts to run the linter and then the tests:
     "pretest": "eslint src",
     "test": "mocha --recursive test"
 ```
+
+# Step 4
+
+Add a .travis.yml and configure Travis to run your tests.
+
+```yml
+language: node_js
+node_js:
+  - 0.12
+```
+
+[![Current Status](https://secure.travis-ci.org/tschaub/web-start.svg?branch=master)](https://travis-ci.org/tschaub/web-start)
