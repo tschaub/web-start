@@ -59,3 +59,18 @@ Modify the start command in package.json:
 ```json
     "start": "ecstatic build & watchy --watch src -- bash -c 'npm test && npm run build'",
 ```
+
+## Step 3
+
+Install a test runner and assertion library:
+
+    npm install mocha chai --save-dev
+
+Split code into modules, and add tests in a test directory.
+
+Update package.json scripts to run the linter and then the tests:
+
+```json
+    "pretest": "eslint src",
+    "test": "mocha --recursive test"
+```
