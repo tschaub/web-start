@@ -11,23 +11,36 @@
     "copy-static": "mkdir -p build && cp src/*.html build",
     "build": "npm run copy-static && browserify src/main.js > build/main.js",
     "start": "ecstatic build & karma start & watchy --watch src -- bash -c 'npm run lint && npm run build'",
-    "lint": "eslint src",
+    "lint": "eslint src test",
     "pretest": "npm run lint",
     "test": "karma start --single-run",
     "test-node": "mocha --recursive test"
   },
+  "browserify": {
+    "transform": [
+      [
+        "babelify",
+        {
+          "ignore": "node_modules"
+        }
+      ]
+    ]
+  },
   "devDependencies": {
+    "babelify": "^6.1.3",
     "browserify": "^10.2.6",
     "chai": "^3.0.0",
     "ecstatic": "^0.8.0",
     "eslint": "^1.0.0-rc-1",
     "eslint-config-planet": "^3.0.0",
+    "eslint-plugin-react": "^2.7.1",
     "karma": "^0.13.0",
     "karma-browserify": "^4.2.1",
     "karma-chrome-launcher": "^0.2.0",
     "karma-mocha": "^0.2.0",
     "karma-sauce-launcher": "^0.2.14",
     "mocha": "^2.2.5",
+    "react": "^0.13.3",
     "watchy": "^0.6.2"
   }
 }
