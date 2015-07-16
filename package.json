@@ -1,0 +1,10 @@
+{
+  "name": "web-start",
+  "version": "0.0.0",
+  "description": "Steps for setting up a web project",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/tschaub/web-start.git"
+  }
+}
