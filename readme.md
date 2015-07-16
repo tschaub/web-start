@@ -120,3 +120,29 @@ Update your test related scripts in package.json:
 ```
 
 Get set up with Sauce Labs, and update your .travis.yml to encrypt your `SAUCE_USERNAME` and `SAUCE_ACCESS_KEY` (see https://docs.saucelabs.com/ci-integrations/travis-ci/).  Update your karma.conf.js to run tests on Sauce Labs if the `TRAVIS` environment variable is set.
+
+# Step 5
+
+Bring in React, Babelify for Browserify transforms, and the React ESLint plugin:
+
+    npm install react babelify eslint-plugin-react --save-dev
+
+Configure Browserify to use the Babelify transform by adding the following to package.json:
+
+```json
+  "browserify": {
+    "transform": [
+      ["babelify", {"ignore": "node_modules"}]
+    ]
+  },
+```
+
+Update your .eslintrc to use the `planet/react` config:
+
+```json
+{
+  "extends": "planet/react"
+}
+```
+
+Write components and test them.
