@@ -1,1 +1,1 @@
-console.log('hello world');
+document.body.appendChild(document.createTextNode('hello world'));

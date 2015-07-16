@@ -10,10 +10,14 @@
   "scripts": {
     "copy-static": "mkdir -p build && cp src/*.html build",
     "build": "npm run copy-static && browserify src/main.js > build/main.js",
-    "start": "ecstatic build"
+    "start": "ecstatic build & watchy --watch src -- bash -c 'npm test && npm run build'",
+    "test": "eslint src"
   },
   "devDependencies": {
     "browserify": "^10.2.6",
-    "ecstatic": "^0.8.0"
+    "ecstatic": "^0.8.0",
+    "eslint": "^1.0.0-rc-1",
+    "eslint-config-planet": "^3.0.0",
+    "watchy": "^0.6.2"
   }
 }
