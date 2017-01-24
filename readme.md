@@ -1,5 +1,7 @@
 # web-start
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/tschaub/web-start.svg)](https://greenkeeper.io/)
+
 Basic web project setup.
 
 ## Step 1
