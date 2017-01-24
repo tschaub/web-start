@@ -4,6 +4,7 @@ node_js:
 branches:
   only:
     - master
+    - /^greenkeeper/.*$/
 env:
   global:
     - secure: gw0E7DKPKkhoIlAOhgw+m+b+lYC7lEaKUe0XrlbTjBCSS98+vJsoJGw55UOKgSALBFlP0ULjOOn+0EtSQ0Ffm10jCLdnizgLzEhO3SGymdxqmQMVPAoitIbarGo4K9On6QYZt5UE/FUvS9Ce3WBtZE5HySn8GEJznPeTzchyh38odF1JglOzij8rRI+/OZfYAoN6+fjN9NTIRixVpEHPTwueBsuCVGjKqPDVzeal7rElfGk9bJOkliV0bfLmdbp9U9P/iDZ/Byr4FvE53qx0Pqhyq3iW6mCLgao/+6kFOvJVw3vKBwYvuNju/GgoEWzUv7XmMYwv/3jvxgCYUBIID4KaBW9BaLgkTrq0+dxfgcjY3rk+6P0lMipSUWbcN1aH7ou6mo0X6aUfFXcqUlrcS11vItUcieIYLrA5AVxm5760FKHc1bT5+L2egDUxnfsTCsrM/NOApM0VgJr1zpL6Pae1uwneFIINHO4FNMCPte7thUDvZu2t5O0KSVXJ9S6dZRLptkYKdoVynHmEcbkc/dxxCxaa+/gMChRP5X8ZKqNRWFZmbCZ3P+sSdCHVdh1cZInaKKoIDvbJrxatWgM0gjDcv1z42jwSeg9jsdf8eTACIlMPTqm019sm6ESJtiHf0Sy0LFAviGHPjNLfHjoFNexIc1T4tyDbuJ2n5pxoWRY=
